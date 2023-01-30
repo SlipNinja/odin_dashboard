@@ -3,7 +3,13 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+}
+
+
 .container {
+    height: 100%;
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 150px 1fr 1fr;
@@ -12,6 +18,11 @@
 .sidebar {
     grid-row: 1 / -1;
     background-color: darkorange;
+    
+    display: grid;
+    grid-template-rows: 100px repeat(10, 30px);
+    align-items: center;
+    gap: 10px;
 }
 
 .header {
@@ -32,4 +43,17 @@
 .side-content2 {
     grid-area: 3 / 3 / 4 / 4;
     background-color: darkolivegreen;
+}
+
+
+
+.title {
+    justify-self: center;
+    font-size: 40px;
+}
+
+.option {
+    padding-left: 12px;
+    font-size: 20px;
+    /*background-color: aqua;*/
 }
