@@ -18,6 +18,11 @@ body {
     height: 100vh;
 }
 
+img{
+    object-fit: contain;
+    min-height: 0;
+}
+
 
 .container {
     height: 100%;
@@ -28,7 +33,7 @@ body {
 
 .sidebar {
     grid-row: 1 / -1;
-    background-color: #2596be;
+    background-color: rgb(70, 70, 70);
     color: white;
     
     display: grid;
@@ -37,14 +42,110 @@ body {
     gap: 15px;
 } 
 
+
 .header {
     grid-column: 2 / -1;
-    background-color: darkred;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 40% 60%;
+    height: 100%;
+    background-color: lightgray;
+    box-shadow: 1px 5px 5px darkgray;
 }
+
+.header .search{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .search * {
+    height: 50%;
+    width: 50%;
+}
+
+.header .search input[type=text] {
+    width: 96%;
+    border-radius: 10px;
+    border: 1px gray solid;
+}
+
+.header .profile{
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .profile * {
+    height: 50%;
+    width: 100%;
+}
+
+.header .profile img{
+    grid-column: 2;
+}
+
+.header .profile div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .name{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .name *{
+    height: 80%;
+}
+
+.header .name .presentation{
+    font-size: 20px;
+    justify-self: start;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header .controls{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .controls button {
+    flex: 1;
+    height: 50%;
+    border-radius: 8px;
+    border: 1px gray solid;
+}
+
+.header .controls button:hover{
+    background-color: lightgray;
+}
+
+.header .controls button:active{
+    background-color: darkgray;
+}
+
 
 .main-content {
     grid-area: 2 / 2 / -1 / -2;
-    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px repeat(3, 1fr);
+}
+
+.projecttitle {
+    grid-column: 1 / -1;
 }
 
 .side-content1 {
@@ -66,12 +167,12 @@ body {
 }
 
 .option {
-    padding-left: 40px;
+    padding-left: 20px;
     font-size: 20px;
     height: 100%;
     display: grid;
     grid-template-columns: 30px 1fr;
-    gap: 40px;
+    gap: 20px;
 }
 
 .option img {
